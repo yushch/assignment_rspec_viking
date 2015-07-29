@@ -7,14 +7,17 @@ describe "viking class" do
    let(:dying){Viking.new(name = "dyingman", health = 1)}
    
    it "check default setting" do
-       viki.health = 150
-      
       #.send(:initialize, "username")
       expect(viki.name).to eq("username")#name setting check
       expect(viki.health).to eq(100)#default health check
       #health can not be overwritten
-      expect{viki.health = 150}.to raise_error(NoMethodError)
       expect(viki.weapon).to eq(nil)#default weapon check
+       
+   end
+   
+   it "can not be overwritten" do
+        
+        expect{viki.health = 150}.to raise_error(NoMethodError) 
        
    end
     
