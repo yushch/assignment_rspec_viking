@@ -68,6 +68,7 @@ class Viking
 end
 
 # Run script
+
 oleg = Viking.new("Oleg")
 sven = Viking.new("Sven")
 oleg.attack(sven)
